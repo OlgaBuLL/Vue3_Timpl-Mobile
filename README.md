@@ -16,7 +16,7 @@
 
 ## A brief overview of this project:    
 
-#### <a href='https://olga-bull-cars-demo.netlify.app/'>VIEW DEMO</a>
+#### <a href='https://timpl-mobile-demo.netlify.app/'>VIEW DEMO</a>
 
 <br>
 
