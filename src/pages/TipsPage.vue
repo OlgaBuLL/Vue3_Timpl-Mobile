@@ -1,5 +1,7 @@
 <template>
-  <section class="tips-page">
+  <Loader v-if="isLoading" />
+
+  <section v-else class="tips-page">
     <EmployeeData />
 
     <div class="tips-page__content">
@@ -45,7 +47,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { useBenefitStore } from "../stores/benefit";
 
 import EmployeeData from "../components/EmployeeData.vue";
@@ -54,7 +56,9 @@ import Rating from "../components/Rating.vue";
 import Benefits from "../components/Benefits.vue";
 import Payment from "../components/Payment.vue";
 import FullAmount from "../components/FullAmount.vue";
+import Loader from "@/components/UI/Loader.vue";
 
+const isLoading = ref(true);
 const benefitStore = useBenefitStore();
 const activeStar = ref(0);
 
@@ -110,6 +114,12 @@ watch(
   },
   { deep: true }
 );
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoading.value = false;
+  }, 2000);
+});
 </script>
 
 <style lang="sass">

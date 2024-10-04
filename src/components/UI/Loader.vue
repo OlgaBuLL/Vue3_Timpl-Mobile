@@ -1,7 +1,7 @@
 <template>
   <div className="loading">
     <div className="loading__content">
-      <p class="loading__title">Loading</p>
+      <BaseIcon name="logo" class="loading__logo" />
       <div className="loading__loader">
         <div className="loading__dot" id="d1"></div>
         <div className="loading__dot" id="d2"></div>
@@ -13,14 +13,16 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import BaseIcon from "./BaseIcon.vue";
+</script>
 <style lang="sass">
 .loading
     position: absolute
     inset: 0
     display: grid
     place-items: center
-    background: $primary-light-grey
+    background: $color-light
 
     &__content
         display: flex
@@ -29,10 +31,10 @@
         align-items: center
         gap: 20px
 
-    &__title
-      font-size: 18px
-      font-weight: $font-weight-bold
-      color: $text-dark-grey
+    &__logo
+        max-width: 96px
+        max-height: auto
+        color: $color-text-dark
 
     &__loader
         position: relative
@@ -42,7 +44,7 @@
     &__dot
         width: 10px
         height: 10px
-        background: $text-dark-grey
+        background: $color-text-light
         border-radius: 50%
         position: absolute
 
