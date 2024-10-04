@@ -135,7 +135,7 @@ const goToEmployeePage = (id) => {
 
 <style lang="sass">
 .employees
-  margin: 16px 0 20px
+  margin: 16px -20px 20px
 
 .employee
     display: flex
