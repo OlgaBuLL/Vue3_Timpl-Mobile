@@ -38,6 +38,7 @@
 🔸 `Vue Router`     
 🔸 `Pinia`     
 🔸 `SVG-sprite`        
+🔸 `Swiper slider`        
 🔸 `SASS`    
 🔸 `BEM-methodology`    
 🔸 `Java Script`     
